@@ -1,0 +1,88 @@
+page-detail {
+      ion-badge{
+        margin-left:  45%;
+      }
+       ion-range{
+        
+        margin-left:10px;
+        margin-right: 10px;
+      }
+
+      
+      h3{
+        float: left;
+      }
+      h5{
+        margin-right: 25%;
+        text-align: right;
+
+      }
+      #profile-bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+       	/*background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/94311/bg.jpg') no-repeat left top transparent;*/
+        background-size: 100%;
+        background-position: 50% 20%;
+        background:linear-gradient(#4E8CA7 , #033C54);
+
+        text-align: center;
+      }
+      
+
+      #imgFondo{
+        height: 40%;
+        width: 100%;
+        margin: 0px;
+        
+       
+      }
+      #profile-name{
+        overflow: hidden;
+
+      }
+      
+     
+       #content {
+        position: relative;
+        margin-top: 0%;
+        
+        background-color: white;
+        
+        padding-top: 150px;
+      }
+
+
+    
+     
+      #profile-info {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        z-index: 2;
+        margin-left:  10%;
+        
+      }
+      .myNav{
+         height: 10px !important;
+      }
+      
+      .center {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+      }
+
+      .card-exercise{
+        
+        position: fixed;
+        z-index: 700;
+      }
+
+      
+     
+      
+}

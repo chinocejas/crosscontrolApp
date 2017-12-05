@@ -1,0 +1,116 @@
+page-home {
+      #profile-bg {
+	 	    /*azul: #156588
+        rojo: #033C54*/
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+       	/*background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/94311/bg.jpg') no-repeat left top transparent;*/
+        background-size: 100%;
+        background-position: 50% 20%;
+        background:linear-gradient(#4E8CA7 , #033C54);
+
+        text-align: center;
+      }
+      #imgback{
+        background: #fff;
+        position: fixed;
+        left: 0;
+        top: 44px;
+        width: 100%;
+        height: 40%;
+
+        background: url('../../assets/img/back1.jpg') no-repeat top right,-moz-linear-gradient(rgba(208, 208, 208, 1.0), rgba(255, 255, 255, 0.9) 50%, rgba(208, 208, 208, 1.0));
+        background-size: 100%;
+        background-position: 50% 20%;
+        
+
+        text-align: center;
+      }
+      
+
+      #content {
+        position: relative;
+        margin-top: 40%;
+        
+        background-color: white;
+        box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
+        padding-top: 200px;
+      }
+
+      #profile-info {
+        position: absolute;
+        top: -95px;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+      }
+      #profile-name {
+        color: #444;
+        font-size: 26px;
+      }
+      #profile-description {
+        font-size: 15px;
+        color: #888;
+      }
+      #profile-description a {
+        color: #888;
+      }
+
+      #profile-image {
+        display: block;
+        border-radius: 100px;
+        border: 1px solid #fff;
+        width: 128px;
+        height: 128px;
+        margin: 30px auto 0;
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+      }
+
+      .list-item-content {
+        padding: 5px;
+      }
+
+      .list-item {
+        color: #666666;
+      }
+
+      .post {
+        color: #444;
+      }
+
+      .post-time {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 11px;
+        color: #888;
+      }
+
+      .post-profile-image {
+        display: inline-block;
+        vertical-align: top;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+      }
+      .post-options {
+        position: absolute;
+        font-size: 16px;
+        right: 5px;
+        bottom: 5px;
+        color: #888;
+      }
+
+      .home {
+    	background: linear-gradient(to bottom,  #000 0%, #fff 100%);
+}
+.registrar{
+  text-align: center;
+  color: #272626;
+}
+
+}

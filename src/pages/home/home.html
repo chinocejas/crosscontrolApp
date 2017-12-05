@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    
+    
+    <div id="profile-bg"></div>
+    <div class="container">
+
+    
+        <div *ngIf="identity" id="content" >
+            
+          <div id="profile-info">
+            <img id="profile-image" src="https://image.ibb.co/c7VBJR/icon.png">
+            <h3 id="profile-name">{{identity.name}}  {{identity.surname}}</h3>
+            <span id="profile-description"> {{identity.email}} </span>
+              
+          </div>
+         
+        </div>
+        <ion-fab right bottom *ngIf="identity" (click)="editUser(userEdit)" >
+          <button ion-fab >
+            <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-fab>
+      </div>
+         
+      <!-- Login user-->
+      <div *ngIf="!identity" id="">
+                       
+           
+            <ion-list *ngIf="!registrarUsuario" >
+              <ion-label floating>Identificate</ion-label>
+              <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="" action="">
+                <ion-item >
+                  <ion-label floating> email</ion-label>
+                  <ion-input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="user.email" required ></ion-input>
+                  
+                </ion-item>
+                <ion-item>
+                    <ion-label floating> password</ion-label>
+                    <ion-input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control" required  ></ion-input> 
+
+                </ion-item>
+                <span *ngIf="!email.valid && email.touched">
+                  El email es Obligatorio men 
+                </span>
+                
+                <button ion-button full block color ="primary"  type="submit" value="Entrar" class="btn btn-primary btn-block btn-large" >
+                    entrar
+                  </button>
+              </form>
+              <ion-label floating class="registrar" (click)="formularioRegister()" >registrarse</ion-label>
+            </ion-list>
+          </div>
+
+
+            <!--Register user -->
+            <ion-list *ngIf="registrarUsuario">
+                <ion-label floating>Registrarte</ion-label>
+                <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" class="" action="">
+                      <ion-item >
+                        <ion-label floating> name</ion-label>
+                        <ion-input type="text" #name="ngModel" name="name" [(ngModel)]="user_register.name" class="form-control" required  ></ion-input>
+                      
+                      </ion-item>
+                      <ion-item>
+                          <ion-label floating> surname</ion-label>
+                          <ion-input  type="text" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname" class="form-control" required  ></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label floating>email</ion-label>
+                        <ion-input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="user_register.email" required >
+
+                        </ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label floating>password</ion-label>
+                        <ion-input type="password" #password="ngModel" name="password" [(ngModel)]="user_register.password" class="form-control" required></ion-input>
+                      </ion-item>
+                      
+                      
+                      <button ion-button full block color ="primary"  type="submit" value="Registrarse" class="btn btn-primary btn-block btn-large" >
+                          Registrarse
+                        </button>
+                        <button (click)="formularioRegister()" ion-button full block color ="red"   value="Cancelar" class="btn btn-warning btn-block btn-large" >
+                            Cancelar 
+                        </button>
+                    
+                     
+                      
+                  
+                    
+          
+              </form>
+            </ion-list>
+            
+             
+                         
+        
+      
+        
+ 
+    
+</ion-content>

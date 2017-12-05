@@ -1,0 +1,17 @@
+<h4>Dashboard ejercicios</h4>
+      
+      <ion-card *ngFor="let producto of productos"> <!--(click)="editarProducto(producto)" -->
+        <ion-item (click)="detalleEjercicio(producto.name,producto.price)">
+          <ion-avatar item-left>
+            <img src="">
+          </ion-avatar>
+          <h1>{{producto.name}}</h1>
+          <ion-badge item-right>{{producto.price}} Kg</ion-badge>
+        </ion-item>
+      </ion-card>
+
+      <ion-fab right bottom>
+        <button ion-fab [navPush]="insertPage">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-fab>

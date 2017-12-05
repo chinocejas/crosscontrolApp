@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Exercises
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+  
+
+
+
+<ion-content padding>
+        
+  <div id="profile-bg"></div>
+     
+  <div id="ejerciciosAll" *ngIf="exercises && user">
+  <ion-card *ngFor="let ejercicio of exercises" > 
+      <ion-item (click)="detalleEjercicio(ejercicio)">
+        <ion-avatar item-left>
+          <img src="">
+        </ion-avatar>
+        <h1>{{ejercicio.name}}</h1>
+        <ion-badge item-right>{{ejercicio.rm}} {{ejercicio.medida}}</ion-badge>
+      </ion-item>
+    </ion-card>
+  </div>
+<ion-fab right bottom *ngIf="identity">
+  <button ion-fab [navPush]="insertPage">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-fab>
+
+<ion-card *ngIf="!user" (click)="getAllExercise()" >
+  <ion-item>
+    <ion-label>Debe loguearse para poder ver sus ejercicios</ion-label>
+    
+  </ion-item>
+</ion-card>
+
+</ion-content>
