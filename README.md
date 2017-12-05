@@ -6,3 +6,6 @@ I wrote this app to get more familiar with stack MEAN and Ionic. It is written c
 * CRUD Exercices
 * Register and Login User
 * Calculate RM of each exercise
+
+## Demo
+This is [demo](https://chinocejas.github.io/crosscontrolApp/www/) 
